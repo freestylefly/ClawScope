@@ -1,0 +1,16 @@
+{
+  "name": "clawscope",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Web console for OpenClaw cron jobs, runs, token usage, notification digest preview, and knowledge TODO preview.",
+  "scripts": {
+    "backend": "node server/api.mjs",
+    "frontend": "node frontend/server.mjs",
+    "dev": "node scripts/dev.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

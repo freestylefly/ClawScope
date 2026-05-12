@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClawScope · OpenClaw 控制台</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">ClawScope MVP</p>
+      <h1>OpenClaw 定时任务与通知日报控制台</h1>
+      <p class="sub">本地只读预览：Cron 任务、运行详情、Token 消耗、通知日报、知识库待办。</p>
+    </div>
+    <button id="refreshAll">刷新全部</button>
+  </header>
+
+  <main class="grid">
+    <section class="card wide">
+      <div class="card-head"><h2>任务列表</h2><span id="jobsStatus" class="status">loading</span></div>
+      <div class="table-wrap"><table id="jobsTable"><thead><tr><th>任务</th><th>状态</th><th>计划</th><th>下次运行</th><th>最近结果</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><h2>运行详情</h2><span id="detailStatus" class="status">请选择任务</span></div>
+      <div id="jobDetail" class="empty">点击左侧任务查看最近运行。</div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><h2>Token 消耗统计</h2><span id="usageStatus" class="status">loading</span></div>
+      <div id="usageBox"></div>
+    </section>
+
+    <section class="card wide">
+      <div class="card-head"><h2>通知日报预览</h2><button id="loadDigest">加载预览</button></div>
+      <pre id="digestBox" class="pre empty">点击加载最近通知预览。</pre>
+    </section>
+
+    <section class="card wide">
+      <div class="card-head"><h2>知识库待办预览</h2><span id="todosStatus" class="status">loading</span></div>
+      <div id="todosBox"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
